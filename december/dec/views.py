@@ -45,6 +45,7 @@ class PostsByTag(ListView):
         context['title'] = 'Записи по тегу: ' + str(Tag.objects.get(slug=self.kwargs['slug']))
         return context
 
+
 class GetPost(DetailView):
     model = Post
     template_name = 'dec/single.html'
